@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --bg-nav-black: #1e202b;
+    --bg-lighter-black: #2e303b;
+    --main-blue : #009ad8;
+    --small-txt : 0.7rem;
+    --midium-txt: 0.9rem
+}
+
+/* !
+ ! 1.0 HEADER 
+ ! 1.1 NAV
+ ! 2.0 forecast section 
+ ! 1.3 WHETHER NEWS
+ ! 3.0 FOOTER
+! */
+
+
+/* ! 1.0 HEADER */
+header nav .cloud {
+    width: 70px;
+} 
+
+/* ! 1.1 NAV */
+header nav a {
+    font-family: 'Roboto', sans-serif;
+}
+header nav a p:last-of-type {
+    font-size: var(--small-txt);
+}
+header nav div ul li .active {
+    border: 3px solid var(--main-blue) !important;
+    color: var(--main-blue) !important;
+    border-radius: 100vh;
+    font-size: var(--midium-txt) !important;
+}
+header nav button span {
+    color: white;
+}
+
+/* ! 2.0 forecast section */
+.forecasts {
+    background-color: var(--bg-nav-black);
+    background-image: url("imgs/banner.png");
+    background-repeat: no-repeat;
+}
+
+/* ! 1.3 WHETHER NEWS */
+.forecasts .container .row .forecast .forecast-head {
+    background-color: var(--bg-nav-black);
+    height: fit-content;
+}
+.forecasts .container .row .forecast .forecast-body {
+    background-color: var(--bg-lighter-black);
+}
+.forecasts .container .row .forecast .forecast-body .deg {
+    font-size: clamp(1rem,6rem,6.5rem);
+}
+.fixed-height {
+    height: 400px;
+}
+.forecasts .container .row .forecast .forecast-body .img-contain {
+    width: 60px;
+}
+
+/* ! 3.0 Footer */
+ .container .input-group input {
+    background-color: var(--bg-nav-black);
+}
+footer {
+    background-color: var(--bg-lighter-black);
+}
+ .container .input-group button {
+    right: 0;
+    top: 50%;
+    background-color: var(--main-blue);
+}
+footer .container p {
+    font-size: var(--midium-txt);
+}
+footer .container .social-links span:not(:last-child) {
+    width: 50px;
+    height: 50px;
+    background-color: var(--bg-nav-black);
+    cursor: pointer;
+    transition: 0.3s;
+}
+footer .container .social-links span a {
+    color: var(--main-blue);
+    transition: 0.3s;   
+}
+footer .container .social-links span:hover:not(:last-child) a {
+    color: white;
+}
+footer .container .social-links span:hover:not(:last-child) {
+    color: white;
+    background-color: var(--main-blue);
+}
+footer .container .social-links span {
+    width: 40px;
+    height: 40px;
+}
