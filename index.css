@@ -24,7 +24,10 @@
 header nav .cloud {
     width: 70px;
 } 
+.douma {
+    font-family: "Courgette", cursive;
 
+}
 /* ! 1.1 NAV */
 header nav a {
     font-family: 'Roboto', sans-serif;
@@ -45,26 +48,39 @@ header nav button span {
 /* ! 2.0 forecast section */
 .forecasts {
     background-color: var(--bg-nav-black);
-    background-image: url("imgs/banner.png");
+    background-image: url("imgs/earth-hour-photo-composition.jpg");
     background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 /* ! 1.3 WHETHER NEWS */
 .forecasts .container .row .forecast .forecast-head {
     background-color: var(--bg-nav-black);
-    height: fit-content;
 }
 .forecasts .container .row .forecast .forecast-body {
     background-color: var(--bg-lighter-black);
 }
-.forecasts .container .row .forecast .forecast-body .deg {
-    font-size: clamp(1rem,6rem,6.5rem);
-}
-.fixed-height {
-    height: 400px;
-}
 .forecasts .container .row .forecast .forecast-body .img-contain {
     width: 60px;
+}
+.forecastHours {
+    background-color: var(--bg-nav-black);
+}
+.forecastHours::-webkit-scrollbar {
+    background-color: var(--bg-nav-black);
+    border-radius: 100vh;
+    height: 10px;
+}
+.forecastHours::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.534);
+    border-radius: 100vh;
+    height: 10px;
+}
+.single-hour {
+    background-color: var(--bg-lighter-black);
+}
+.hour-contain {
+    width: 50px;
 }
 
 /* ! 3.0 Footer */

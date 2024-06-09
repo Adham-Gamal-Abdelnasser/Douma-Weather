@@ -18,6 +18,10 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <!-- ! google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     <!-- ! main css file -->
     <link rel="stylesheet" href="index.css" />
   </head>
@@ -30,7 +34,7 @@
               <img src="imgs/cloud.png" alt="cloud icon" class="w-100" />
             </div>
             <div class="mx-2">
-              <p class="mb-0 text-white fs-6 fw-bold">Whether</p>
+              <p class="douma mb-0 text-white fs-3 fw-bold">Douma</p>
               <p class="mt-0 text-white-50">tagline goes here</p>
             </div>
           </a>
@@ -98,81 +102,81 @@
           <input
             type="text"
             name="text"
-            class="rounded-pill border-0 w-100 p-3"
+            class="rounded-pill text-white border-0 w-100 p-3"
             placeholder="Enter city..."
             id="searchInput"
           />
         </div>
 
         <div class="row">
-          <div class="col-lg-4 col-md-6 col-sm-12 my-2">
-            <div
-              class="forecast text-white-50 rounded-3 overflow-hidden border border-1 border-info fixed-height"
-            >
-              <div
-                class="forecast-head d-flex justify-content-between align-items-center px-2"
-              >
-                <p class="mt-2" id="today"></p>
-                <p class="mt-2" id="todayDate"></p>
+          <div class="col-12 my-2">
+            <div class="forecast text-white-50 rounded-3 overflow-auto border border-1 border-info">
+              <div class="forecast-head d-flex justify-content-between align-items-center px-2">
+                <p class="days mt-2"></p>
+                <p class="dates mt-2" ></p>
               </div>
               <div class="forecast-body p-3 h-100">
-                <p class="currentCity fs-3"></p>
+                <p class="city fs-3"></p>
                 <div class="d-flex gap-3 align-items-center">
-                  <p class="fw-bold text-white deg" id="todayTemp"></p>
+                  <p class="temp fw-bold text-white fs-1 deg"></p>
                   <div class="img-contain">
-                    <img id="todayIcon" class="w-100" />
+                    <img class="icon w-100" />
                   </div>
                 </div>
-                <p class="text-info" id="todayStatus"></p>
+                <p class="statue text-info"></p>
+                  <div class="forecastHours my-3 p-2 rounded-2 overflow-auto d-flex flex-row w-100 gap-2"></div>
                 <div class="d-flex gap-3">
-                  <p id="humidity"><i class="fas fa-umbrella"></i></p>
-                  <p id="windVelocity"><i class="fas fa-wind"></i></p>
-                  <p id="direction"><i class="fas fa-compass"></i></p>
+                  <p class="humidity "></p>
+                  <p class="windVelocity"></p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 col-sm-12 my-2">
-            <div
-              class="forecast text-white-50 overflow-hidden rounded-3 border border-1 border-info fixed-height"
-            >
-              <div class="forecast-head d-flex justify-content-center px-2">
-                <p class="nextDay mt-2"></p>
+          <div class="col-lg-6 col-md-12 my-2">
+            <div class="forecast text-white-50 rounded-3 overflow-auto border border-1 border-info">
+              <div class="forecast-head d-flex justify-content-between px-2">
+                <p class="days nextDay mt-2"></p>
+                <p class="dates mt-2"></p>
               </div>
-              <div
-                class="forecast-body d-flex flex-column gap-3 align-items-center p-3 h-100"
-              >
-                <p class="currentCity fs-4"></p>
-                <div class="img-contain">
-                  <img class="nextIcon w-100" />
+              <div class="forecast-body gap-3 align-items-center p-3 h-100">
+                <p class="city fs-4"></p>
+                <div class="d-flex gap-3 align-items-center">
+                  <p class="temp nextTemp fw-bold text-white my-0 fs-1"></p>
+                  <div class="img-contain">
+                    <img class="icon nextIcon w-100" />
+                  </div>
                 </div>
-                <div>
-                  <p class="nextTemp fw-bold text-white my-0 fs-2"></p>
+                <p class="statue text-info"></p>
+                <div class="forecastHours my-3 p-2 rounded-2 overflow-auto d-flex flex-row w-100 gap-2"></div>
+                <div class="d-flex gap-3">
+                  <p class="humidity "></p>
+                  <p class="windVelocity"></p>
                 </div>
-                <p class="nextStatus text-info"></p>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 col-sm-12 my-2">
-            <div
-              class="forecast text-white-50 rounded-3 overflow-hidden border border-1 border-info fixed-height"
-            >
-              <div class="forecast-head d-flex justify-content-center px-2">
-                <p class="nextDay mt-2"></p>
+          <div class="col-lg-6 col-md-12 my-2">
+            <div class="forecast text-white-50 rounded-3 overflow-auto border border-1 border-info">
+              <div class="forecast-head d-flex justify-content-between px-2">
+                <p class="days nextDay mt-2"></p>
+                <p class="dates mt-2" id="nextDate">10May</p>
               </div>
-              <div
-                class="forecast-body d-flex flex-column gap-3 align-items-center p-3 h-100"
-              >
-                <p class="currentCity fs-4"></p>
-                <div class="img-contain">
-                  <img class="nextIcon w-100" />
+              <div class="forecast-body  gap-3 align-items-center p-3 h-100">
+                <p class="city fs-4"></p>
+                <div class="d-flex gap-3 align-items-center">
+                  <p class="temp nextTemp fw-bold text-white my-0 fs-2"></p>
+                  <div class="img-contain">
+                    <img class="icon nextIcon w-100" />
+                  </div>
                 </div>
-                <div>
-                  <p class="nextTemp fw-bold text-white my-0 fs-2"></p>
+                <p class="statue nextStatus text-info"></p>
+                <div class="forecastHours my-3 p-2 rounded-2 overflow-auto d-flex flex-row w-100 gap-2"></div>
+                <div class="d-flex gap-3">
+                  <p class="humidity "></p>
+                  <p class="windVelocity"></p>
                 </div>
-                <p class="nextStatus text-info"></p>
               </div>
             </div>
           </div>
